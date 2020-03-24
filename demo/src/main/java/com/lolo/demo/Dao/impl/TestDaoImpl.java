@@ -28,9 +28,4 @@ public class TestDaoImpl implements TestDao {
         return list;
     }
 
-    @Override
-    public List<Map> getTestDBInfo(Integer id) {
-        return null;
-    }
-
 }

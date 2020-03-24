@@ -15,7 +15,7 @@ import java.util.Map;
  */
 @Mapper
 @Repository
-public interface TestDBDao {
+public interface TestDBMapper {
 
     @Select("select * from `user` where id=#{id}")
     public List<Map> getDeptById(Integer id);

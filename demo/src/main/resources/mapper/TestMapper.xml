@@ -2,6 +2,6 @@
 
 <mapper namespace="testDao">
     <select id="getTestDBInfo" resultType="java.util.Map">
-        select id,username,password,email from `user` where id=#{id}
+        select id,username,password,email from test.`user` where id=#{id}
     </select>
 </mapper>

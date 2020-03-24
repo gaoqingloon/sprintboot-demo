@@ -102,7 +102,6 @@ public class TestController {
     }
 
     //getDeptById
-    //
     @GetMapping("/t6/{id}")
     @ApiOperation("t6")
     public List<Map> testFunc6(@PathVariable("id") Integer id) {
@@ -110,4 +109,23 @@ public class TestController {
         //[{name=李四, id=1009, age=22}]
         return testService.getDeptById(id);
     }
+
+    @GetMapping("/find/{tableName}")
+    @ApiOperation("findTable")
+    public void QueryTable(@PathVariable("tableName") String table) {
+        testService.findAll(table);
+    }
+
+    @GetMapping("/create")
+    @ApiOperation("createTable")
+    public void createTable() {
+        testService.createTable();
+    }
+
+    @GetMapping("/insert")
+    @ApiOperation("insert")
+    public void insert() {
+        testService.insert();
+    }
+
 }
